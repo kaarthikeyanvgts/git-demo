@@ -1,0 +1,16 @@
+name: Git Branching Strategy
+
+on:
+  push:
+    branches: master
+  workflow_dispatch:
+
+jobs:
+  Code-Copy:
+    runs-on: kayaar
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+        with:
+          path: 'master'
